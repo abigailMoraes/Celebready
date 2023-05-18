@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@108;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+
+#mobile {
+  display: none;
+  align-items: center;
+}
+
+#mobile i {
+  color: #222;
+  font-size: 24px;
+  padding-left: 20px;
+}
+
+h1 {
+  font-size: 50px;
+  line-height: 64px;
+  color: #222;
+}
+
+h2 {
+  font-size: 46px;
+  line-height: 54px;
+  color: #222;
+}
+
+h4 {
+  font-size: 20px;
+  color: #222;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+p {
+  font-size: 16px;
+  color: #465b52;
+  margin: 15px 0 20px 0;
+}
+
+.section-m1 {
+  margin: 40px 0;
+}
+
+.body {
+  width: 100%;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background: whitesmoke;
+  box-shadow: 0 5px 15px rgba(240, 229, 229, 0.09);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+#navbar li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+  transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+  color: orange;
+}
+
+#navbar li a:hover::after,
+#navbar li a.active::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background-color: orange;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+.logo-navbar {
+  display: inline-flex;
+}
+
+.logo {
+  display: inline-flex;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+}
+
+.textbox {
+  background-color: #f4efea6e;
+  padding: 20px;
+  margin: 20px;
+}
+
+#topper {
+  background-image: url("assets/bread.jpg");
+  background-repeat: no-repeat;
+  background-position: top 10% right 0;
+  background-size: cover;
+  padding: 00 80px;
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  min-width: 500px;
+}
+
+#topper h4 {
+  padding-bottom: 15px;
+  color: rgb(212, 211, 211);
+}
+
+#topper h2 {
+  color: orange;
+}
+
+#topper h3 {
+  color: #efeeea;
+}
+
+#topper p {
+  color: whitesmoke;
+}
+#topper button {
+  background: transparent url("assets/button.png") no-repeat top;
+  background-color: transparent;
+  color: rgb(7, 7, 7);
+  border: 0;
+  padding: 5%;
+  font-size: medium;
+  text-align: center;
+  background-size: 110%;
+  background-position: center;
+  cursor: pointer;
+}
+
+.form {
+  display: block;
+  margin-top: 1%;
+  margin-left: 25%;
+  margin-right: auto;
+  width: 50%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid rgb(246, 245, 243);
+  box-shadow: 0px 0px 5px 1px rgba(166, 165, 165, 0.5);
+  text-align: left;
+}
+
+.form input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.form input #searchterm {
+  background-image: url("assets/Search.png"); /* Add a search icon to input */
+  background-position: center; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  background-color: transpa rent;
+  background-size: 16px;
+}
+
+.form button {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+.products {
+  padding: 40px 80px;
+}
+
+#products {
+  text-align: center;
+  margin-top: 10%;
+}
+
+#formheader {
+  display: flex;
+  margin-top: 5%;
+  justify-content: center;
+  align-content: center;
+}
+
+#formheader h2 {
+  display: flex;
+}
+
+#products .bread {
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid rgb(246, 245, 243);
+  box-shadow: 0px 0px 5px 1px rgba(166, 165, 165, 0.4);
+  margin: 20px 20px 20px 20px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 300px;
+  height: 500px;
+  text-align: center;
+}
+
+#products .bread:hover {
+  box-shadow: 0px 0px 5px 1px rgba(166, 165, 165, 0.4);
+}
+
+#products .bread img {
+  flex-direction: row;
+  width: 100%;
+  height: 300px;
+  margin: 1%;
+}
+
+#products .bread p {
+  flex-direction: column;
+  margin: 2%;
+}
+
+#about {
+  flex-direction: column;
+  background-image: url("assets/croissants-with-powdered-sugar-grey-table.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: lighten;
+  padding: 00 80px;
+  height: 100vh;
+  width: 100%;
+  min-width: 500px;
+  min-height: 1500px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-position: center;
+}
+
+#about .title {
+  display: flex;
+  align-self: flex-start;
+  color: rgb(21, 16, 4);
+  margin-top: 5%;
+}
+
+#about p {
+  font-size: 23px;
+  color: rgb(11, 9, 2);
+  font-weight: 600;
+  width: 80vw;
+  margin-bottom: 10%;
+  min-width: 200px;
+  justify-self: flex-start;
+}
+
+.map {
+  padding-bottom: 50%;
+  position: relative;
+  margin: 2%;
+}
+
+.map iframe {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+#contact {
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+#contact h2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+#contact img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+}
+
+.contactform {
+  width: 100%;
+  margin: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactform textarea {
+  width: 100%;
+}
+#close {
+  display: none;
+}
+
+@media (max-width: 601px) {
+  #products {
+    padding: 40 40px;
+  }
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: whitesmoke;
+    box-shadow: 0 40px 60px rgba(240, 229, 229, 0.1);
+    padding: 80px 0 0 10px;
+  }
+
+  #navbar.active {
+    right: 0px;
+  }
+
+  #navbar li {
+    margin-bottom: 25px;
+  }
+
+  #close {
+    display: flex;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #222;
+    font-size: 24px;
+  }
+
+  #mobile {
+    display: flex;
+    align-items: center;
+    align-items: flex-end;
+  }
+
+  #mobile i {
+    color: #222;
+    font-size: 24px;
+    padding-left: 20px;
+  }
+}

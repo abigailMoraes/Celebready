@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Celebready</title>
+    <link rel="icon" href="assets/celebreadyicon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/6ec12487c1.js"></script>
+  </head>
+  <body>
+    <section id="header">
+      <span class="logo-navbar">
+        <a href="#"
+          ><img
+            src="assets/celebreadyicon.png"
+            class="logo"
+            alt="celebready icon"
+        /></a>
+        <h3 class="logo">Celebready</h3>
+      </span>
+      <div>
+        <ul id="navbar">
+          <li><a href="#topper">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <a href="#" id="close"><i class="fas fa-times"></i></a>
+        </ul>
+      </div>
+      <div id="mobile">
+        <i id="bar" class="fas fa-outdent"></i>
+      </div>
+    </section>
+    <section id="topper">
+      <div class="textbox">
+        <h4>If you came for the puns, you'll stay for the buns...</h4>
+        <h2>Celebrity inspired baking</h2>
+        <h3>First time patrons receive a complementary Siabatta sandwich</h3>
+        <p>It's the yeast we can do!</p>
+        <button onclick="document.getElementById('products').scrollIntoView();">
+          Order Now
+        </button>
+      </div>
+    </section>
+    <section id="formheader">
+      <h3>Add a product</h2>
+    </section>
+    <section id="form" class="form">
+      <form>
+        <input type="text" id="name" placeholder="Name" name="name" /><br />
+        <input
+          type="text"
+          id="description"
+          placeholder="Description"
+          name="description"
+        /><br />
+        <input type="text" placeholder="Price" id="price" name="price" />
+        <input type="text" placeholder="Image" id="image" name="image" /><br />
+        <input type="submit" value="submit" />
+        <button id="clearButton">Clear Items</button>
+        <input
+          type="text"
+          id="searchterm"
+          onkeyup="search()"
+          placeholder="Search for items..."
+        />
+      </form>
+    </section>
+
+    <section id="products" class="products">
+      <h2>Our Products</h2>
+      <h1>Baked Goods</h1>
+      <div class="breads-container">
+        <div class="breads"></div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="textbox">
+        <h2 class="title">About</h2>
+        <p>
+          At Celebready, we believe that indulging in delicious treats should be
+          a star-studded experience. Our passion for baking and our love for
+          celebrities inspired us to create a unique bakery that combines the
+          best of both worlds. Step into our bakery and you'll be greeted with a
+          wide array of mouthwatering treats that are inspired by your favorite
+          celebrities. From signature cakes that capture the essence of
+          Hollywood glamour to cookies that pay homage to iconic movie moments,
+          each treat is crafted with the utmost care and creativity.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <img src="assets/celebreadyicon.png" />
+      <div class="contactform">
+        <form class="form" onsubmit="sendEmail(); reset(); return false;">
+          <h3>Leave a message</h3>
+          <input type="text" id="name" placeholder="Your Name" required />
+          <input type="text" id="email" placeholder="Email" required />
+          <input type="text" id="phone" placeholder="Phone" required />
+          <textarea
+            id="message"
+            rows="4"
+            placeholder="leave a message ..."
+          ></textarea>
+          <input type="submit" />
+        </form>
+      </div>
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2605.7037769249505!2d-123.09360812374352!3d49.22514467138418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5486746aa5f4af73%3A0xe05a9c542bff7a2a!2sBreka%20Bakery%20%26%20Cafe%20(Fraser)!5e0!3m2!1sen!2sca!4v1684296723261!5m2!1sen!2sca"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </section>
+    <script src="./script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+  </body>
+</html>

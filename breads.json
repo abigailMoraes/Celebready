@@ -1,0 +1,23 @@
+{
+   "breads":[
+    {
+        "name":"Wheatney Houston",
+        "description":"Nutritious 6 grain whole wheat loaf, one grain per every Whitney Grammy. Classy and timeless.",
+        "price":"9.40",
+        "image":"assets/wheatneyhouston.jpg"
+    },
+    {
+        "name":"Breadley Cooper",
+        "description":"Classic artisan no knead bread.",
+        "price":"6.40",
+        "image":"assets/breadlycooper.jpg"
+    },
+    {
+        "name":"Pita Dinklage",
+        "description":"Introducing the Pita Dinklage a small but mighty burst of flavor that will leave you amazed! Inspired by the iconic actor, Peter Dinklage, this pita is as impressive as its namesake.",
+        "price":"3.40",
+        "image":"assets/pitadinklage.jpg"
+
+    }
+    ]
+}
