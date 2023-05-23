@@ -6,19 +6,30 @@
   font-family: "Spartan", sans-serif;
 }
 
-wrapper {
-  overflow-x: clip;
+html {
+  overflow: scroll;
 }
 
-#mobile {
-  display: none;
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+
+.body {
+  width: 100%;
+}
+
+#header {
+  display: flex;
   align-items: center;
-}
-
-#mobile i {
-  color: #222;
-  font-size: 24px;
-  padding-left: 20px;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background: whitesmoke;
+  box-shadow: 0 5px 15px rgba(240, 229, 229, 0.09);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 
 h1 {
@@ -43,31 +54,21 @@ h6 {
   font-size: 12px;
 }
 
+#mobile {
+  display: none;
+  align-items: center;
+}
+
+#mobile i {
+  color: #222;
+  font-size: 24px;
+  padding-left: 20px;
+}
+
 p {
   font-size: 16px;
   color: #465b52;
   margin: 15px 0 20px 0;
-}
-
-.section-m1 {
-  margin: 40px 0;
-}
-
-.body {
-  width: 100%;
-}
-
-#header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 80px;
-  background: whitesmoke;
-  box-shadow: 0 5px 15px rgba(240, 229, 229, 0.09);
-  z-index: 999;
-  position: sticky;
-  top: 0;
-  left: 0;
 }
 
 #navbar {
@@ -191,7 +192,7 @@ p {
   background-image: url("assets/Search.png"); /* Add a search icon to input */
   background-position: center; /* Position the search icon */
   background-repeat: no-repeat; /* Do not repeat the icon image */
-  background-color: transpa rent;
+  background-color: transparent;
   background-size: 16px;
 }
 
@@ -235,6 +236,7 @@ p {
   width: 300px;
   height: 500px;
   text-align: center;
+  overflow-y: scroll;
 }
 
 #products .bread:hover {
@@ -409,6 +411,7 @@ p {
     margin-right: 5%;
     width: 90%;
     min-width: 200px;
+    overflow: hidden;
   }
 
   .form input {

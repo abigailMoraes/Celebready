@@ -1,35 +1,21 @@
-let breads = [
-  {
-    name: "Wheatney Houston",
-    description:
-      "Nutritious 6 grain whole wheat loaf, one grain per every Whitney Grammy. Classy and timeless.",
-    price: "9.40",
-    image: "assets/wheatneyhouston.jpg",
-  },
-  {
-    name: "Breadley Cooper",
-    description: "Classic artisan no knead bread.",
-    price: "6.40",
-    image: "assets/breadleycooper.jpg",
-  },
-  {
-    name: "Pita Dinklage",
-    description:
-      "Introducing the Pita Dinklage a small but mighty burst of flavor that will leave you amazed! Inspired by the iconic actor, Peter Dinklage, this pita is as impressive as its namesake.",
-    price: "3.40",
-    image: "assets/pitadinklage.jpg",
-  },
-];
+var existing = localStorage.getItem("breadsjsonstring");
+var breadsjsonstring = existing
+  ? existing
+  : '[{"name":"Wheatney Houston","description":"Nutritious 6 grain whole wheat loaf, one grain per every Whitney Grammy. Classy and timeless.","price":"9.40","image":"assets/wheatneyhouston.jpg"},{"name":"Breadley Cooper","description":"Classic artisan no knead bread.","price":"6.40","image":"assets/breadleycooper.jpg"},{"name":"Pita Dinklage","description":"Introducing the Pita Dinklage a small but mighty burst of flavor that will leave you amazed! Inspired by the iconic actor, Peter Dinklage, this pita is as impressive as its namesake.","price":"3.40","image":"assets/pitadinklage.jpg"}]';
+let breads = JSON.parse(breadsjsonstring);
 
+// rendering breads
 renderBreads(breads);
 
+// clears each bread/item with their information and images temporarily
 function clearBreads() {
-  console.log("clearing breads");
   document.getElementById("products").innerHTML = "";
 }
 
+// clearing breads in response to clear button click, only clears temporarily
 document.getElementById("clearButton").addEventListener("click", clearBreads);
 
+// render each bread/item with their information and images
 function renderBreads(breads) {
   let output = "";
 
@@ -48,21 +34,20 @@ function renderBreads(breads) {
   document.querySelector(".breads").innerHTML = output;
 }
 
+// adds new breads/items and persists them to a json string stored in localstorage
 form.onsubmit = (event) => {
   event.preventDefault();
   const myFormData = new FormData(event.target);
-
   const formDataObj = {};
   myFormData.forEach((value, key) => (formDataObj[key] = value));
-  console.log(formDataObj);
   breads.push(formDataObj);
+  localStorage.setItem("breadsjsonstring", JSON.stringify(breads));
   renderBreads(breads);
-  console.log(breads);
 };
 
+// filter by keywords that appear in the name or description of the breads/items
 function search() {
   input = document.getElementById("searchterm");
-  console.log(input.value);
   searchbreads = breads.filter(
     (bread) =>
       bread.name.toLowerCase().indexOf(input.value.toLowerCase()) > -1 ||
@@ -71,6 +56,7 @@ function search() {
   renderBreads(searchbreads);
 }
 
+// sending an email with elastic email service
 function sendEmail() {
   Email.send({
     Host: "smtp.elasticemail.com",
@@ -83,6 +69,7 @@ function sendEmail() {
   }).then((message) => alert(message));
 }
 
+// handling the navbar open-close functionality for mobile views
 const bar = document.getElementById("bar");
 const nav = document.getElementById("navbar");
 const closebutton = document.getElementById("close");
@@ -90,10 +77,7 @@ const closebutton = document.getElementById("close");
 if (bar) {
   bar.addEventListener("click", () => {
     nav.classList.add("active");
-    console.log(nav.classList.contains("active"));
-    console.log("in add event listener");
   });
-  console.log(closebutton);
 }
 
 if (closebutton) {
